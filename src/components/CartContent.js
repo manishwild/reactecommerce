@@ -1,9 +1,7 @@
 import React from 'react'
 
-const CarContent = () => {
-  return (
-    <div>CarContent</div>
-  )
+const CartContent = () => {
+  return <div>CarContent</div>
 }
 
-export default CarContent
+export default CartContent
