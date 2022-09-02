@@ -5,8 +5,10 @@ import manish from '../assets/m1.jpg'
 import { FaBars } from 'react-icons/fa'
 import { links } from '../utils/constants'
 import CartButtons from './CartButtons'
+import { useProductsContext } from '../context/products_context'
 
 const NavBar = () => {
+  const { openSidebar } = useProductsContext()
   return (
     <NavContainer>
       <div className="nav-center">
@@ -14,7 +16,7 @@ const NavBar = () => {
           <Link to="/">
             <img src={manish} alt="logo manish" />
           </Link>
-          <button type="button" className="nav-toggle">
+          <button type="button" className="nav-toggle" onClick={openSidebar}>
             <FaBars />
           </button>
         </div>
@@ -49,7 +51,7 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      padding-top:15px;
+      padding-top: 15px;
       width: 100px;
       height: 100px;
       margin-left: -15px;

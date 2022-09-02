@@ -8,19 +8,21 @@ import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
 
 const SideBar = () => {
-  const data = useProductsContext()
-  console.log(data)
-  const isOpen = false
+  const { isSidebarOpen, closeSidebar } = useProductsContext()
+  
+
   return (
     <SidebarContainer>
-      <aside className={`${isOpen ? 'sidebar show-sidebar' : 'sidebar'}`}>
+      <aside
+        className={`${isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}`}
+      >
         <div className="sidebar-header">
           <img src={manish} alt="logo manish" className="logo" />
-          <button className="close-btn">
+          <button className="close-btn" onClick={closeSidebar}>
             <FaTimes />
           </button>
         </div>
-        <ul className="links">
+        <ul className="links" onClick={closeSidebar}>
           {links.map(({ id, text, url }) => {
             return (
               <li key={id}>
@@ -29,7 +31,9 @@ const SideBar = () => {
             )
           })}
           <li>
-            <Link to="/checkout">Checkout</Link>
+            <Link to="/checkout" onClick={closeSidebar}>
+              Checkout
+            </Link>
           </li>
         </ul>
         <CartButtons />
