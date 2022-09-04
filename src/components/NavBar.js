@@ -51,9 +51,9 @@ const NavContainer = styled.nav`
     align-items: center;
     justify-content: space-between;
     img {
-      padding-top: 15px;
+      padding-top: 5px;
       width: 100px;
-      height: 100px;
+      height: 85px;
       margin-left: -15px;
     }
   }

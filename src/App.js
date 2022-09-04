@@ -4,6 +4,7 @@ import { NavBar, SideBar, Footer } from './components'
 import {
   AboutPage,
   CartPage,
+  CheckoutPage,
   ErrorPages,
   HomePages,
   PrivateRout,
@@ -19,6 +20,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePages />} />
         <Route path="about" element={<AboutPage />} />
+        <Route path="checkout" element={<CheckoutPage />} />
         <Route path="cart" element={<CartPage />} />
         <Route path="products" element={<ProductsPage />} />
         <Route path="products/:id" element={<SingleProductPage />} />
