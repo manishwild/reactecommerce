@@ -39,6 +39,9 @@ const Wrapper = styled.section`
   h4 {
     color: var(--clr-primary-1);
   }
+  h4:hover {
+    color: white;
+  }
   padding: 5rem 0;
 
   background: var(--clr-primary-10);
@@ -64,6 +67,12 @@ const Wrapper = styled.section`
     p {
       color: var(--clr-primary-2);
     }
+    p:hover {
+      color: white;
+    }
+  }
+  .service:hover {
+    background: var(--clr-primary-3);
   }
   span {
     width: 4rem;
@@ -78,6 +87,10 @@ const Wrapper = styled.section`
     svg {
       font-size: 2rem;
     }
+  }
+  .icon:hover {
+    background: black;
+    color: white;
   }
   @media (min-width: 992px) {
     .header {

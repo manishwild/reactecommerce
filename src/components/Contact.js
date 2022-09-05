@@ -12,11 +12,16 @@ const Contact = () => {
             Accusantium laboriosam aspernatur omnis deleniti sint, quam
             assumenda aperiam quibusdam perferendis temporibus?
           </p>
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            action="https://formspree.io/f/xdojakqe"
+            method="POST"
+          >
             <input
               type="email"
               className="form-input"
               placeholder="Enter your Email"
+              name="_replyto"
             />
             <button className="submit-btn">Suscribe</button>
           </form>
@@ -27,6 +32,10 @@ const Contact = () => {
 }
 
 const Wrapper = styled.section`
+  .section-center:hover {
+    background: var(--clr-primary-6);
+    color: white;
+  }
   padding: 5rem 0;
   h3 {
     text-transform: none;
@@ -35,6 +44,9 @@ const Wrapper = styled.section`
     line-height: 2;
     max-width: 45em;
     color: var(--clr-grey-5);
+  }
+  p:hover {
+    color: white;
   }
   .contact-form {
     width: 90vw;
@@ -73,6 +85,7 @@ const Wrapper = styled.section`
   }
   .submit-btn:hover {
     color: var(--clr-white);
+    background: var(--clr-primary-2);
   }
   @media (min-width: 992px) {
     .content {
