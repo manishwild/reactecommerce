@@ -23,7 +23,9 @@ const Contact = () => {
               placeholder="Enter your Email"
               name="_replyto"
             />
-            <button className="submit-btn">Suscribe</button>
+            <button type="submit" className="submit-btn">
+              Suscribe
+            </button>
           </form>
         </div>
       </div>

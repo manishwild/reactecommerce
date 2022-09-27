@@ -26,6 +26,7 @@ const Wrapper = styled.footer`
     color: hsl(22, 31%, 52%);
     svg {
       color: red;
+      margin-bottom: -2px;
     }
   }
   span a {
